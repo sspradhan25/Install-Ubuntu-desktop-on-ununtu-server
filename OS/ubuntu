@@ -19,18 +19,17 @@ echo "Done"
 
 
 echo "######################################"
-echo "System Updating and Upgrading"
+echo "System Updating"
 echo "######################################"
 # Update system
-sudo apt-get update && sudo apt-get upgrade -y
-
+sudo apt-get update -y
 echo "Done"
 
 echo "######################################"
 echo "Installing Requrements"
 echo "######################################"
 # All requirements
-sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal -y
 
 echo "Done"
 
@@ -38,7 +37,7 @@ echo "######################################"
 echo "Installing VNCServer"
 echo "######################################"
 # Install VNC Server
-sudo apt-get install vnc4server
+sudo apt-get install vnc4server -y
 
 echo "Done"
 
