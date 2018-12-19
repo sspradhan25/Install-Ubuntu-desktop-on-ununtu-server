@@ -1,20 +1,23 @@
 #!/bin/bash
-
+ip=`ifconfig eth0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
 echo "######################################"
 echo "Ubuntu GUI Desktop Installer with VNC"
 echo "######################################"
 
 echo "######################################"
 echo "Developed by sspradhan.com"
-echo "Loading"
-echo "########"
-echo "###############"
-echo "#####################"
-echo "##########################"
-echo "##############################"
-echo "################################"
-echo "#################################"
 echo "######################################"
+echo "######################################"
+# Input username and password
+echo "###################################"
+echo "Please enter your new login details"
+echo "###################################"
+echo "Enter new username: "
+read username
+echo "Enter new password: "
+read password
+
+echo "Loading"
 echo "Done"
 
 
@@ -50,7 +53,7 @@ echo "It will ask you for password. Set any password you like"
 echo "######################################"
 
 # Starting VNC Server
-vncserver :1
+vncserver :1 -$password
 
 echo "Done"
 
@@ -75,15 +78,17 @@ echo "nautilus &">>~/.vnc/xstartup
 
 echo "Done"
 
+#Starting VNC Server
+vncserver
 
 echo "######################################"
 echo "Installation Done"
 echo "Important Thing To Remember"
-echo "Now to Start VNCServer just type command: vncserver:1"
+echo "Your VNC accers id:" $ip":1"
+echo "your Password: "$password
 echo "To Stop VNCServer just type command: vncserver -kill :1"
-echo "To Stop VNCServer just type command: vncserver -kill :1"
-echo "Now you can access your desktop on Server through VNCserver:  YOURIPADRESS:1
-echo "Your password you used to above while installing vncserver"
+echo "To start vncserver just use Command: vncserver"
+echo "Every time after reboot or power on please start vncserver again"
 echo ""
 echo ""
 echo "Thank you"
