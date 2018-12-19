@@ -1,0 +1,71 @@
+#!/bin/bash
+
+echo "######################################"
+echo "Ubuntu GUI Desktop Installer with VNC"
+echo "######################################"
+
+echo "######################################"
+echo "Developed by sspradhan.com"
+echo "Loading"
+echo "########"
+echo "###############"
+echo "#####################"
+echo "##########################"
+echo "##############################"
+echo "################################"
+echo "#################################"
+echo "######################################"
+echo "Done"
+
+
+echo "######################################"
+echo "System Updating and Upgrading"
+echo "######################################"
+# Update system
+sudo apt-get update && sudo apt-get upgrade -y
+
+echo "Done"
+
+echo "######################################"
+echo "Installing Requrements"
+echo "######################################"
+# All requirements
+sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+
+echo "Done"
+
+echo "######################################"
+echo "Installing VNCServer"
+echo "######################################"
+# Install VNC Server
+sudo apt-get install vnc4server
+
+echo "Done"
+
+
+echo "######################################"
+echo "Starting VNCServer"
+echo "######################################"
+echo "######################################"
+echo "It will ask you for password. Set any password you like"
+echo "######################################"
+
+# Starting VNC Server
+vncserver :1
+
+echo "Done"
+
+echo "######################################"
+echo "Killing VNCServer"
+echo "######################################"
+
+# Killing VNC Server
+vncserver -kill :1
+
+echo "Done"
+
+echo "######################################"
+echo "Prepairing your Desktop by replacing /.vnc/xstartup file"
+echo "######################################"
+
+cp -f [oringinal file] [new file]
