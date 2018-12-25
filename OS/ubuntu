@@ -8,14 +8,6 @@ echo "######################################"
 echo "Developed by sspradhan.com"
 echo "######################################"
 echo "######################################"
-# Input username and password
-echo "###################################"
-echo "Please enter your new login details"
-echo "###################################"
-echo "Enter new username: "
-read username
-echo "Enter new password: "
-read password
 
 echo "Loading"
 echo "Done"
@@ -53,7 +45,7 @@ echo "It will ask you for password. Set any password you like"
 echo "######################################"
 
 # Starting VNC Server
-vncserver :1 -$password
+vncserver :1
 
 echo "Done"
 
