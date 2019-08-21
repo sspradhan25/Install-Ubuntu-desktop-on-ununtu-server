@@ -24,8 +24,7 @@ echo "######################################"
 echo "Installing Requrements"
 echo "######################################"
 # All requirements
-sudo apt-get install --no-install-recommends ubuntu-desktop
-sudo apt-get gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal -y
+sudo apt-get install ubuntu-desktop apt-get gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal -y
 
 echo "Done"
 
